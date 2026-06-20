@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  <!-- Icon circle -->
+  <circle cx="24" cy="24" r="22" fill="#C0392B"/>
+  <rect x="12" y="15" width="24" height="18" rx="2" fill="white"/>
+  <path d="M12 15 L24 24 L36 15" stroke="#C0392B" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+  <circle cx="24" cy="19" r="3" fill="#C0392B"/>
+  <path d="M24 22 L24 25" stroke="#C0392B" stroke-width="2" stroke-linecap="round"/>
+  <!-- Text: SG Postal Code -->
+  <text x="54" y="20" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="14" fill="#1A1A2E">SG Postal</text>
+  <text x="54" y="36" font-family="Inter, Arial, sans-serif" font-weight="400" font-size="12" fill="#C0392B">Code Directory</text>
+</svg>

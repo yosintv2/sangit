@@ -1,26 +1,79 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-sg-red: #C0392B;
+  --color-sg-red-dark: #922b21;
+  --color-sg-red-light: #e74c3c;
+  --color-sg-navy: #1A1A2E;
+  --color-sg-navy-light: #2d2d4e;
+  --color-sg-green: #27ae60;
+  --color-sg-bg: #F8F9FA;
+  --color-sg-border: #e2e8f0;
+  --color-sg-text: #2d3748;
+  --color-sg-muted: #718096;
+  --font-sans: Inter, system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-sg-bg);
+  color: var(--color-sg-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Postal code monospace styling */
+.postal-code {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+
+/* Smooth focus rings */
+:focus-visible {
+  outline: 2px solid var(--color-sg-red);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Remove default button styles */
+button {
+  cursor: pointer;
+}
+
+/* Copy toast animation */
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(4px); }
+  15% { opacity: 1; transform: translateY(0); }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.copy-toast {
+  animation: fadeInOut 2s ease forwards;
+}
+
+/* Map container */
+.map-container iframe {
+  border: none;
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+/* FAQ accordion */
+details > summary {
+  list-style: none;
+  cursor: pointer;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Scroll to top smooth */
+html {
+  scroll-behavior: smooth;
 }

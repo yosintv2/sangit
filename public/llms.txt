@@ -1,0 +1,40 @@
+# SG Postal Code Directory
+> Singapore's most complete postal code directory with 141,726 verified addresses and 121,361 unique postal codes.
+
+## What this site provides
+- Individual pages for every Singapore postal code (6-digit format)
+- Full address details: building name, block number, road name, Singapore postal code
+- GPS coordinates (latitude/longitude) for each address
+- Google Maps and Apple Maps integration
+- Nearby postal codes within 500 metres using Haversine distance
+- Browse by district (D01–D91) and by road name (3,867 roads)
+- Full-text search across the entire database
+
+## Data Source
+All data is sourced from Singapore Land Authority (SLA) OneMap — the authoritative Singapore government geographic information system.
+Data is processed at build time for instant, no-loading-spinner delivery.
+
+## URL Structure
+- Home: https://www.sgpostalcode.com/
+- Postal code: https://www.sgpostalcode.com/postal/{6-digit-code}/
+- District: https://www.sgpostalcode.com/district/{district-id}/
+- Road: https://www.sgpostalcode.com/road/{road-slug}/
+- Search: https://www.sgpostalcode.com/search/?q={query}
+
+## Coverage
+- Total records: 141,726
+- Unique postal codes: 121,361
+- Postal districts: 84 active (codes 01–91 with gaps)
+- Roads: 3,867 named roads
+- Country: Singapore (SG)
+
+## Sitemap
+https://www.sgpostalcode.com/sitemap.xml
+
+## API / Data Access
+For programmatic access to Singapore postal code data, refer to:
+- SLA OneMap API: https://www.onemap.gov.sg/apidocs/
+- data.gov.sg: https://data.gov.sg
+
+## Contact
+https://www.sgpostalcode.com/contact/

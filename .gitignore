@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Generated at build time by scripts/fetch-data.mjs — do not commit
+/data/
+/public/data/
+/public/sitemap-postal.xml
+/public/sitemap-postal-*.xml
