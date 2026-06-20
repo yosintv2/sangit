@@ -1,6 +1,33 @@
+"use client";
+
+import { useEffect, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import Link from "next/link";
 
 export default function NotFound() {
+  const pathname = usePathname();
+  const router = useRouter();
+  const [redirecting, setRedirecting] = useState(false);
+
+  useEffect(() => {
+    const path = pathname || window.location.pathname;
+    // /postal/049409 → /postal/04/049409/
+    const match = path.match(/^\/postal\/(\d{6})\/?$/);
+    if (match) {
+      setRedirecting(true);
+      const code = match[1];
+      router.replace(`/postal/${code.slice(0, 2)}/${code}/`);
+    }
+  }, [pathname, router]);
+
+  if (redirecting) {
+    return (
+      <div className="min-h-[60vh] flex items-center justify-center">
+        <p className="text-gray-500">Redirecting…</p>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-[60vh] flex flex-col items-center justify-center px-4 text-center">
       <div className="w-20 h-20 rounded-full bg-red-50 flex items-center justify-center mb-6">
