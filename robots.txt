@@ -1,0 +1,6 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+
+Host: https://www.sgpostalcode.com
+Sitemap: https://www.sgpostalcode.com/sitemap.xml

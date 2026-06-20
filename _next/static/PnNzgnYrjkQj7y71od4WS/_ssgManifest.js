@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fpostal-sitemap\u002F[page]","\u002Fpostal\u002F[code]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
